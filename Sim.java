@@ -1,4 +1,4 @@
-package hardestgame;
+package sim;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -16,12 +16,12 @@ import javax.swing.JPanel;
  *
  * @author John Word
  */
-public class Game extends JPanel implements KeyListener, MouseListener {
+public class Sim extends JPanel implements KeyListener, MouseListener {
 
     private Timer timer;
     private int frameCount = 0;
     
-    public Game() {
+    public Sim() {
         timer = new Timer();
         timer.scheduleAtFixedRate(new ScheduleTask(), 100, 1000/12);
     }
@@ -51,8 +51,8 @@ public class Game extends JPanel implements KeyListener, MouseListener {
     }
     
     public static void main(String[] args) {
-        JFrame j = new JFrame("Blobby Game");
-        Container c = new Game();
+        JFrame j = new JFrame("Blob Sim");
+        Container c = new Sim);
         j.add(c);
         j.pack();
         j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
